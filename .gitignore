@@ -1,0 +1,7 @@
+.vs
+.git
+node_modules
+/docs/.vuepress/dist
+/docs/.vuepress/.temp
+/docs/.vuepress/.cache
+/docs/.vuepress/.cache/deps
