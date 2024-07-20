@@ -22,7 +22,7 @@ docs/ * 网站的根目录 *
 
 ## Markdown 语法
 
-文档使用 *Markdown* 语法编写，第一次使用，请参见 [Markdown](markdown.html) 。
+文档使用 *Markdown* 语法编写，第一次使用，请参见 [Markdown](markdown/) 。
 
 ## 添加新的页面
 
