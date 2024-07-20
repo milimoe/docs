@@ -10,10 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout VuePress repo
+    - name: Checkout code
       uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
 
     - name: Set up Node.js
       uses: actions/setup-node@v4
@@ -26,19 +24,8 @@ jobs:
     - name: Build VuePress site
       run: yarn build
 
-    - name: Checkout GitHub Pages repo
-      uses: actions/checkout@v4
-      with:
-        repository: milimoe/milimoe.github.io
-        path: main
-
     - name: Deploy to GitHub Pages
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
-        rsync -av --delete ./docs/.vuepress/dist/ docs/ || exit 0
-        git add .
-        git commit -m 'Deploy VuePress site'
-        git push origin main
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs/.vuepress/dist
