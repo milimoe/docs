@@ -23,7 +23,7 @@ export default defineUserConfig({
             },
         ],
         sidebar: 'heading',
-        repo: 'milimoe/milimoe-docs',
+        repo: 'milimoe/docs',
         docsDir: 'docs',
         editLinks: true,
         editLinkText: '在 GitHub 上编辑此页',
