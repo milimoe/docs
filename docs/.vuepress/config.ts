@@ -17,6 +17,7 @@ export default defineUserConfig({
                 text: '指南',
                 children: [
                     { text: 'FunGame', link: '/fungame/' },
+                    { text: 'Oshima', link: '/oshima/' },
                     { text: 'RainBOT', link: '/rainbot/' },
                 ],
             },
